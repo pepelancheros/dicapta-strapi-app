@@ -7,8 +7,8 @@ export default ({ env }) => {
     postgres: {
       connection: {
         connectionString: env("DATABASE_URL"), // Use connectionString for PostgreSQL
-        ssl: env.bool("DATABASE_SSL", true) && {
-          rejectUnauthorized: false, // Set to true if you want to validate certificates
+        ssl: {
+          rejectUnauthorized: false,
         },
         schema: env("DATABASE_SCHEMA", "public"),
       },
