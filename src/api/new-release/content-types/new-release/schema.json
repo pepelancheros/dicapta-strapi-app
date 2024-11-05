@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "new_releases",
+  "info": {
+    "singularName": "new-release",
+    "pluralName": "new-releases",
+    "displayName": "new release"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "accessibilityReleaseYear": {
+      "type": "biginteger",
+      "required": true,
+      "min": "2020",
+      "max": "2220"
+    },
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "titleDescription": {
+      "type": "string"
+    },
+    "series": {
+      "type": "boolean",
+      "required": true
+    },
+    "seasonNumber": {
+      "type": "integer",
+      "required": false
+    },
+    "Language": {
+      "type": "enumeration",
+      "enum": [
+        "ES",
+        "EN"
+      ],
+      "required": true
+    },
+    "CC": {
+      "type": "boolean",
+      "required": true
+    },
+    "AD": {
+      "type": "boolean",
+      "required": true
+    },
+    "ASL": {
+      "type": "boolean",
+      "required": true
+    },
+    "provider": {
+      "type": "string"
+    },
+    "whereToWatch": {
+      "type": "text"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "altText": {
+      "type": "string"
+    },
+    "includedInAll4Access": {
+      "type": "boolean",
+      "required": true
+    }
+  }
+}
