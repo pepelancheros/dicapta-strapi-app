@@ -4,7 +4,8 @@
   "info": {
     "singularName": "new-release",
     "pluralName": "new-releases",
-    "displayName": "new release"
+    "displayName": "New release",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

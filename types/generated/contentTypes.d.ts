@@ -372,7 +372,8 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiNewReleaseNewRelease extends Struct.CollectionTypeSchema {
   collectionName: 'new_releases';
   info: {
-    displayName: 'new release';
+    description: '';
+    displayName: 'New release';
     pluralName: 'new-releases';
     singularName: 'new-release';
   };
