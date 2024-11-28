@@ -12,29 +12,43 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
       "unique": true
     },
-    "imageUrl": {
-      "type": "string",
-      "required": true
-    },
-    "pdfUrl": {
-      "type": "string",
-      "required": true
-    },
-    "publishDate": {
-      "type": "date"
-    },
-    "Image": {
-      "allowedTypes": [
-        "images",
-        "files"
+    "month": {
+      "type": "enumeration",
+      "enum": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
       ],
+      "required": true
+    },
+    "image": {
       "type": "media",
       "multiple": false,
-      "required": false
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "file": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "files"
+      ]
     }
   }
 }
