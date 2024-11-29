@@ -16,39 +16,20 @@
       "type": "string",
       "unique": true
     },
-    "month": {
-      "type": "enumeration",
-      "enum": [
-        "january",
-        "february",
-        "march",
-        "april",
-        "may",
-        "june",
-        "july",
-        "august",
-        "september",
-        "october",
-        "november",
-        "december"
-      ],
-      "required": true
+    "date": {
+      "type": "date"
     },
     "image": {
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "file": {
       "type": "media",
       "multiple": true,
       "required": true,
-      "allowedTypes": [
-        "files"
-      ]
+      "allowedTypes": ["files"]
     }
   }
 }

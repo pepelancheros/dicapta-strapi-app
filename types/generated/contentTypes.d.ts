@@ -464,6 +464,7 @@ export interface ApiNewsletterNewsletter extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
     file: Schema.Attribute.Media<'files', true> & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -472,23 +473,6 @@ export interface ApiNewsletterNewsletter extends Struct.CollectionTypeSchema {
       'api::newsletter.newsletter'
     > &
       Schema.Attribute.Private;
-    month: Schema.Attribute.Enumeration<
-      [
-        'january',
-        'february',
-        'march',
-        'april',
-        'may',
-        'june',
-        'july',
-        'august',
-        'september',
-        'october',
-        'november',
-        'december',
-      ]
-    > &
-      Schema.Attribute.Required;
     name: Schema.Attribute.String & Schema.Attribute.Unique;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
