@@ -19,17 +19,13 @@
     "date": {
       "type": "date"
     },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": ["images"]
+    "imageUrl": {
+      "type": "string",
+      "unique": true
     },
-    "file": {
-      "type": "media",
-      "multiple": true,
-      "required": true,
-      "allowedTypes": ["files"]
+    "pdfUrl": {
+      "type": "string",
+      "required": true
     }
   }
 }
