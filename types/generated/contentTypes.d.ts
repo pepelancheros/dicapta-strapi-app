@@ -397,9 +397,10 @@ export interface ApiNewReleaseNewRelease extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    description: Schema.Attribute.String;
     imageUrl: Schema.Attribute.String;
     includedInAll4Access: Schema.Attribute.Boolean & Schema.Attribute.Required;
-    Language: Schema.Attribute.Enumeration<['ES', 'EN']> &
+    language: Schema.Attribute.Enumeration<['SP', 'EN']> &
       Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -407,12 +408,27 @@ export interface ApiNewReleaseNewRelease extends Struct.CollectionTypeSchema {
       'api::new-release.new-release'
     > &
       Schema.Attribute.Private;
+    month: Schema.Attribute.Enumeration<
+      [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
+      ]
+    >;
     provider: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     seasonNumber: Schema.Attribute.Integer;
     series: Schema.Attribute.Boolean & Schema.Attribute.Required;
-    Title: Schema.Attribute.String & Schema.Attribute.Required;
-    titleDescription: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

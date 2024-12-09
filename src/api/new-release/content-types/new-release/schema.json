@@ -18,11 +18,11 @@
       "min": "2020",
       "max": "2220"
     },
-    "Title": {
+    "title": {
       "type": "string",
       "required": true
     },
-    "titleDescription": {
+    "description": {
       "type": "string"
     },
     "series": {
@@ -33,10 +33,10 @@
       "type": "integer",
       "required": false
     },
-    "Language": {
+    "language": {
       "type": "enumeration",
       "enum": [
-        "ES",
+        "SP",
         "EN"
       ],
       "required": true
@@ -68,6 +68,23 @@
     "includedInAll4Access": {
       "type": "boolean",
       "required": true
+    },
+    "month": {
+      "type": "enumeration",
+      "enum": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ]
     }
   }
 }
