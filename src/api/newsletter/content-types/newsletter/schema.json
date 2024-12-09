@@ -21,7 +21,8 @@
     },
     "imageUrl": {
       "type": "string",
-      "unique": true
+      "unique": false,
+      "required": true
     },
     "pdfUrl": {
       "type": "string",
