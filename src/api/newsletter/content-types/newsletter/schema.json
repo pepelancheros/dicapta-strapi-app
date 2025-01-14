@@ -20,12 +20,12 @@
       "type": "date"
     },
     "imageUrl": {
-      "type": "string",
+      "type": "text",
       "unique": false,
       "required": true
     },
     "pdfUrl": {
-      "type": "string",
+      "type": "text",
       "required": true
     }
   }

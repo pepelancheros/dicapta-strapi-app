@@ -391,14 +391,14 @@ export interface ApiNewReleaseNewRelease extends Struct.CollectionTypeSchema {
         string
       >;
     AD: Schema.Attribute.Boolean & Schema.Attribute.Required;
-    altText: Schema.Attribute.String;
+    altText: Schema.Attribute.Text;
     ASL: Schema.Attribute.Boolean & Schema.Attribute.Required;
     CC: Schema.Attribute.Boolean & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.String;
-    imageUrl: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.Text;
     includedInAll4Access: Schema.Attribute.Boolean & Schema.Attribute.Required;
     language: Schema.Attribute.Enumeration<['SP', 'EN']> &
       Schema.Attribute.Required;
@@ -481,7 +481,7 @@ export interface ApiNewsletterNewsletter extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     date: Schema.Attribute.Date;
-    imageUrl: Schema.Attribute.String & Schema.Attribute.Required;
+    imageUrl: Schema.Attribute.Text & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -489,7 +489,7 @@ export interface ApiNewsletterNewsletter extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String & Schema.Attribute.Unique;
-    pdfUrl: Schema.Attribute.String & Schema.Attribute.Required;
+    pdfUrl: Schema.Attribute.Text & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

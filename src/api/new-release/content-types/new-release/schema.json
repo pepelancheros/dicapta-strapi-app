@@ -60,10 +60,10 @@
       "type": "text"
     },
     "imageUrl": {
-      "type": "string"
+      "type": "text"
     },
     "altText": {
-      "type": "string"
+      "type": "text"
     },
     "includedInAll4Access": {
       "type": "boolean",
