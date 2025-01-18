@@ -397,7 +397,7 @@ export interface ApiNewReleaseNewRelease extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
     imageUrl: Schema.Attribute.Text;
     includedInAll4Access: Schema.Attribute.Boolean & Schema.Attribute.Required;
     language: Schema.Attribute.Enumeration<['SP', 'EN']> &
@@ -433,6 +433,7 @@ export interface ApiNewReleaseNewRelease extends Struct.CollectionTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     whereToWatch: Schema.Attribute.Text;
+    whereToWatchLink: Schema.Attribute.Text;
   };
 }
 

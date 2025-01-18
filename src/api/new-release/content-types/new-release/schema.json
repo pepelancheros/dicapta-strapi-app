@@ -23,7 +23,7 @@
       "required": true
     },
     "description": {
-      "type": "string"
+      "type": "text"
     },
     "series": {
       "type": "boolean",
@@ -85,6 +85,9 @@
         "November",
         "December"
       ]
+    },
+    "whereToWatchLink": {
+      "type": "text"
     }
   }
 }
