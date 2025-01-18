@@ -13,7 +13,7 @@
   "pluginOptions": {},
   "attributes": {
     "accessibilityReleaseYear": {
-      "type": "biginteger",
+      "type": "integer",
       "required": true
     },
     "title": {
@@ -25,7 +25,8 @@
     },
     "series": {
       "type": "boolean",
-      "required": true
+      "required": true,
+      "default": false
     },
     "seasonNumber": {
       "type": "integer",

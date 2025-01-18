@@ -381,7 +381,7 @@ export interface ApiNewReleaseNewRelease extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    accessibilityReleaseYear: Schema.Attribute.BigInteger &
+    accessibilityReleaseYear: Schema.Attribute.Integer &
       Schema.Attribute.Required;
     AD: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
@@ -428,7 +428,9 @@ export interface ApiNewReleaseNewRelease extends Struct.CollectionTypeSchema {
     provider: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     seasonNumber: Schema.Attribute.Integer;
-    series: Schema.Attribute.Boolean & Schema.Attribute.Required;
+    series: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
