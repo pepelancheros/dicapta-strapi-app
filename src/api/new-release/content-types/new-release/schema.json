@@ -14,9 +14,7 @@
   "attributes": {
     "accessibilityReleaseYear": {
       "type": "biginteger",
-      "required": true,
-      "min": "2020",
-      "max": "2220"
+      "required": true
     },
     "title": {
       "type": "string",
@@ -43,15 +41,18 @@
     },
     "CC": {
       "type": "boolean",
-      "required": true
+      "required": true,
+      "default": false
     },
     "AD": {
       "type": "boolean",
-      "required": true
+      "required": true,
+      "default": false
     },
     "ASL": {
       "type": "boolean",
-      "required": true
+      "required": true,
+      "default": false
     },
     "provider": {
       "type": "string"
@@ -67,7 +68,8 @@
     },
     "includedInAll4Access": {
       "type": "boolean",
-      "required": true
+      "required": true,
+      "default": false
     },
     "month": {
       "type": "enumeration",

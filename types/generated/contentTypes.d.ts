@@ -382,24 +382,25 @@ export interface ApiNewReleaseNewRelease extends Struct.CollectionTypeSchema {
   };
   attributes: {
     accessibilityReleaseYear: Schema.Attribute.BigInteger &
+      Schema.Attribute.Required;
+    AD: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
-      Schema.Attribute.SetMinMax<
-        {
-          max: '2220';
-          min: '2020';
-        },
-        string
-      >;
-    AD: Schema.Attribute.Boolean & Schema.Attribute.Required;
+      Schema.Attribute.DefaultTo<false>;
     altText: Schema.Attribute.Text;
-    ASL: Schema.Attribute.Boolean & Schema.Attribute.Required;
-    CC: Schema.Attribute.Boolean & Schema.Attribute.Required;
+    ASL: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    CC: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
     imageUrl: Schema.Attribute.Text;
-    includedInAll4Access: Schema.Attribute.Boolean & Schema.Attribute.Required;
+    includedInAll4Access: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
     language: Schema.Attribute.Enumeration<['SP', 'EN']> &
       Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
