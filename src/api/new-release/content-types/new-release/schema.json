@@ -32,14 +32,6 @@
       "type": "integer",
       "required": false
     },
-    "language": {
-      "type": "enumeration",
-      "enum": [
-        "SP",
-        "EN"
-      ],
-      "required": true
-    },
     "CC": {
       "type": "boolean",
       "required": true,
@@ -72,25 +64,14 @@
       "required": true,
       "default": false
     },
-    "month": {
-      "type": "enumeration",
-      "enum": [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
-      ]
-    },
     "whereToWatchLink": {
       "type": "text"
+    },
+    "month": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
     }
   }
 }

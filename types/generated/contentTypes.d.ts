@@ -401,30 +401,14 @@ export interface ApiNewReleaseNewRelease extends Struct.CollectionTypeSchema {
     includedInAll4Access: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<false>;
-    language: Schema.Attribute.Enumeration<['SP', 'EN']> &
-      Schema.Attribute.Required;
+    language: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::new-release.new-release'
     > &
       Schema.Attribute.Private;
-    month: Schema.Attribute.Enumeration<
-      [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December',
-      ]
-    >;
+    month: Schema.Attribute.String;
     provider: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     seasonNumber: Schema.Attribute.Integer;
