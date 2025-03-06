@@ -16,24 +16,20 @@
       "type": "string",
       "required": true
     },
-    "content": {
-      "type": "text",
-      "required": true
-    },
     "imageUrl": {
       "type": "text"
     },
     "imageAltText": {
       "type": "string"
     },
-    "contentBlocks": {
-      "type": "blocks"
-    },
-    "contentMarkdown": {
-      "type": "richtext"
-    },
     "publishDate": {
       "type": "date"
+    },
+    "content": {
+      "type": "blocks"
+    },
+    "cardText": {
+      "type": "text"
     }
   }
 }

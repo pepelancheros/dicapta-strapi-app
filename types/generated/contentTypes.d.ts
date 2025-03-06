@@ -381,9 +381,8 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    contentBlocks: Schema.Attribute.Blocks;
-    contentMarkdown: Schema.Attribute.RichText;
+    cardText: Schema.Attribute.Text;
+    content: Schema.Attribute.Blocks;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
